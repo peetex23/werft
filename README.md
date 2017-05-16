@@ -6,3 +6,5 @@
 4. Ketik composer install
 5. Install npm (https://www.npmjs.com/package/npm)
 6. Ketik npm install
+
+Untuk mengakses ketik http://localhost/werft/public
