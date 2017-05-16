@@ -5344,6 +5344,9 @@ a.list-group-item-danger.active:focus {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
+.panel-footer .button-group {
+  margin-left: 80%;
+}
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
   margin-bottom: 0;
@@ -8512,6 +8515,10 @@ body {
 
 .sidebar .nav-third-level li a {
     padding-left: 52px;
+}
+
+.sidebar .nav-fourth-level li a {
+    padding-left: 67px;
 }
 
 @media(min-width:768px) {
