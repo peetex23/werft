@@ -1,4 +1,5 @@
 @extends ('layouts.dashboard')
+@section('title', 'Aset Lain')
 @section('page_heading','Form Aset Lain')
 
 @section('section')
@@ -9,13 +10,13 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nama Aset Lain</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="Masukkan Nama Aset Lain">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nilai Perolehan</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="Masukkan Nilai Perolehan">
                     </div>
                 </div>

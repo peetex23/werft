@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@section('title', 'Mata Uang')
 @section('page_heading','Data Mata Uang')
 
 @section('section')

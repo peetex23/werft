@@ -1,4 +1,5 @@
 @extends ('layouts.dashboard')
+@section('title', 'Mata Uang')
 @section('page_heading','Form Mata Uang')
 
 @section('section')
@@ -9,7 +10,7 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nama Mata Uang</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="Masukkan Nama Mata Uang">
                     </div>
                 </div>

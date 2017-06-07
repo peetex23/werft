@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@section('title', 'Pemasok')
 @section('page_heading','Data Pemasok')
 
 @section('section')

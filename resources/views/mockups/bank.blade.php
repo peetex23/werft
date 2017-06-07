@@ -1,4 +1,5 @@
 @extends ('layouts.dashboard')
+@section('title', 'Bank')
 @section('page_heading','Form Bank')
 
 @section('section')
@@ -9,19 +10,19 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nama Bank</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="Masukkan Nama Bank">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nomor Rekening</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Jenis Rekening</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <label class="radio-inline">
                             <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>Tabungan
                         </label>

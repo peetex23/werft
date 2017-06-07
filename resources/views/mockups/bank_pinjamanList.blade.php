@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@section('title', 'Bank Pinjaman')
 @section('page_heading','Data Bank Pinjaman')
 
 @section('section')

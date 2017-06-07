@@ -1,4 +1,5 @@
 @extends ('layouts.dashboard')
+@section('title', 'Saldo Awal')
 @section('page_heading','Form Saldo Awal')
 
 @section('section')
@@ -9,13 +10,13 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Periode Saldo Awal</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="Masukkan Periode Saldo Awal">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nama Akun</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <select class="form-control">
                             <option>Kas</option>
                             <option>Giro</option>
@@ -39,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Nilai Saldo Awal</label>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input class="form-control" placeholder="Masukkan Nilai Saldo Awal">
                     </div>
                 </div>

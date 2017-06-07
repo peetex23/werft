@@ -3727,8 +3727,8 @@ tbody.collapse.in {
 }
 .input-group[class*="col-"] {
   float: none;
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .input-group .form-control {
   position: relative;
@@ -6288,8 +6288,6 @@ button.close {
     bottom: 20px;
   }
 }
-.clearfix:before,
-.clearfix:after,
 .dl-horizontal dd:before,
 .dl-horizontal dd:after,
 .container:before,
@@ -6321,7 +6319,6 @@ button.close {
   display: table;
   content: " ";
 }
-.clearfix:after,
 .dl-horizontal dd:after,
 .container:after,
 .container-fluid:after,
@@ -6336,6 +6333,18 @@ button.close {
 .pager:after,
 .panel-body:after,
 .modal-footer:after {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.clearfix:after {
   clear: both;
 }
 .center-block {

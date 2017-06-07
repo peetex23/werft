@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url ('') }}">Manajemen Keuangan Galangan Kapal v1.0</a>
+                <a class="navbar-brand" href="{{ url ('/home') }}">Manajemen Keuangan Galangan Kapal v1.0</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -50,7 +50,7 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li {{ (Request::is('/') ? 'class="active"' : '') }}>
+                        <li {{ (Request::is('/home') ? 'class="active"' : '') }}>
                             <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
@@ -75,9 +75,6 @@
                                     <a href="{{url('mockups/bank_pinjamanList')}}">Bank Pemberi Pinjaman</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/matauangList')}}">Mata Uang</a>
-                                </li>
-                                <li>
                                     <a href="{{url('mockups/aset_lainList')}}">Aset Lain</a>
                                 </li>
                                 <li>
@@ -95,27 +92,35 @@
                                             <a href="#">Penjualan <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="#">Penjualan Jasa Tunai</a>
+                                                    <a href="{{url('mockups/penjualan_jasatunai')}}">Penjualan Jasa Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pembayaran Utang</a>
+                                                    <a href="{{url('mockups/pembayaran_piutang')}}">Pembayaran Piutang</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pembayaran Aset</a>
+                                                    <a href="{{url('mockups/pembayaran_aset')}}">Pembayaran Aset</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Utang</a>
+                                            <a href="#">Utang <span class="fa arrow"></span></a>
+                                            <ul class="nav nav-fourth-level">
+                                                <li>
+                                                    <a href="{{url('mockups/utang_bank')}}">Utang Bank</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{url('mockups/utang_nonbank')}}">Utang Non-Bank</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <a href="#">Modal <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="#">Modal Uang</a>
+                                                    <a href="{{url('mockups/modal_uang')}}">Modal Uang</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Modal Barang</a>
+                                                    <a href="{{url('mockups/modal_barang')}}">Modal Barang</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -123,15 +128,15 @@
                                             <a href="#">Penarikan dari Bank <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="#">Penarikan Giro</a>
+                                                    <a href="{{url('mockups/penarikan_giro')}}">Penarikan Giro</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Penarikan Tabungan</a>
+                                                    <a href="{{url('mockups/penarikan_tabungan')}}">Penarikan Tabungan</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Pendapatan diterima di muka</a>
+                                            <a href="{{url('mockups/pendapatan_dimuka')}}">Pendapatan diterima di muka</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -142,44 +147,44 @@
                                             <a href="#">Kewajiban <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="#">Pelunasan Pembelian Kredit</a>
+                                                    <a href="{{url('mockups/pelunasan_pembelian_kredit')}}">Pelunasan Pembelian Kredit</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pelunasan Utang Bank</a>
+                                                    <a href="{{url('mockups/pelunasan_utang_bank')}}">Pelunasan Utang Bank</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pelunasan Utang non-Bank</a>
+                                                    <a href="{{url('mockups/pelunasan_utang_nonbank')}}">Pelunasan Utang non-Bank</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pelunasan Biaya</a>
+                                                    <a href="{{url('mockups/pelunasan_biaya')}}">Pelunasan Biaya</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Biaya</a>
+                                            <a href="{{url('mockups/biaya')}}">Biaya</a>
                                         </li>
                                         <li>
                                             <a href="#">Pembelian Aset <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="#">Pembelian Aset Tetap Tunai</a>
+                                                    <a href="{{url('mockups/pembelian_aset_tetap_tunai')}}">Pembelian Aset Tetap Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pembelian Aset Tetap Kredit</a>
+                                                    <a href="{{url('mockups/pembelian_aset_tetap_kredit')}}">Pembelian Aset Tetap Kredit</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pembelian Aset Lain Tunai</a>
+                                                    <a href="{{url('mockups/pembelian_aset_lain_tunai')}}">Pembelian Aset Lain Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pembelian Aset Lain Kredit</a>
+                                                    <a href="{{url('mockups/pembelian_aset_lain_kredit')}}">Pembelian Aset Lain Kredit</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Penghapusan Piutang</a>
+                                            <a href="{{url('mockups/penghapusan_piutang')}}">Penghapusan Piutang</a>
                                         </li>
                                         <li>
-                                            <a href="#">Biaya dibayar di muka</a>
+                                            <a href="{{url('mockups/biaya_dimuka')}}">Biaya dibayar di muka</a>
                                         </li>
                                     </ul>
                                 </li>

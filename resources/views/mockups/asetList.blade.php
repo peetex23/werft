@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@section('title', 'Aset')
 @section('page_heading','Data Aset')
 
 @section('section')

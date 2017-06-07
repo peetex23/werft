@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+@section('title', 'Pelanggan')
 @section('page_heading','Data Pelanggan')
 
 @section('section')

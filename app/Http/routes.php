@@ -13,7 +13,12 @@
 
 Route::get('/', function()
 {
-	return View::make('home');
+	return View::make('mockups.login');
+});
+
+Route::get('/login', function()
+{
+	return View::make('mockups.login');
 });
 
 Route::get('/form', function() {
