@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration {
+class TbAset extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,14 @@ class CreateUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('cfg_users', function(Blueprint $table)
+		Schema::create('tb_aset', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('name');
-			$table->string('email')->unique();
-			$table->string('password', 60);
-			$table->rememberToken();
 			$table->timestamps();
+			$table->char('aset_nama',255);
+			$table->char('aset_kelompok',255);
+			$table->tinyInteger('aset_masa_manfaat')->unsigned()->nullable();
+			$table->bigInteger('aset_harga')->unsigned()->nullable();
 		});
 	}
 
@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('cfg_users');
+		Schema::drop('tb_aset');
 	}
 
 }

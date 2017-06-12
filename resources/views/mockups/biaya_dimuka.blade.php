@@ -14,10 +14,10 @@
         <form role="form" class="form form-horizontal">
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Jumlah Pendapatan</label>
+                    <label class="col-md-3 control-label">Jumlah Biaya</label>
                     <div class="col-md-9 input-group">
                         <span class="input-group-addon">Rp.&nbsp;</span>
-                        <input class="form-control" placeholder="">
+                        <input class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
                     </div>
                 </div>
                 <div class="form-group">
@@ -68,6 +68,7 @@
 @endsection
 @section('script-end')
     @parent
+    <script src="{{asset('assets/scripts/formatCurrency.js')}}"></script>
     <script src="{{asset('assets/bootstrap.datetimepicker/moment.js')}}"></script>
     <script src="{{asset('assets/bootstrap.datetimepicker/bootstrap-datetimepicker.js')}}"></script>
 

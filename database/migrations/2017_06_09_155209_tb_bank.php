@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration {
+class TbBank extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,14 @@ class CreateUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('cfg_users', function(Blueprint $table)
+		Schema::create('tb_bank', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('name');
-			$table->string('email')->unique();
-			$table->string('password', 60);
-			$table->rememberToken();
 			$table->timestamps();
+			$table->char('bank_nama',255);
+			$table->char('bank_nomor_rek',255);
+			$table->char('bank_jenis_rek',255);
+			$table->char('bank_pinjaman',1)->default('n');
 		});
 	}
 
@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('cfg_users');
+		Schema::drop('tb_bank');
 	}
 
 }

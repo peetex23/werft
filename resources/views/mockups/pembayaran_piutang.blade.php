@@ -9,7 +9,7 @@
         <form role="form" class="form form-horizontal">
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Jumlah Utang</label>
+                    <label class="col-md-3 control-label">Jumlah Piutang</label>
                     <div class="col-md-9 input-group">
                         <span class="input-group-addon">Rp.&nbsp;</span>
                         <input class="form-control" placeholder="">

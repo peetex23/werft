@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration {
+class MstSaldoAwal extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,13 @@ class CreateUsersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('cfg_users', function(Blueprint $table)
+		Schema::create('mst_saldo_awal', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('name');
-			$table->string('email')->unique();
-			$table->string('password', 60);
-			$table->rememberToken();
 			$table->timestamps();
+			$table->char('saldo_awal_periode',255);
+			$table->char('saldo_awal_akun',255);
+			$table->bigInteger('saldo_awal_nilai')->unsigned()->nullable();
 		});
 	}
 
@@ -30,7 +29,7 @@ class CreateUsersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('cfg_users');
+		Schema::drop('mst_saldo_awal');
 	}
 
 }
