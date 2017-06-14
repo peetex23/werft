@@ -4,30 +4,38 @@
 
 @section('section')
 <div class="col-sm-12">
+@if(Session::has('message'))
+    <div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> 
+        {{ Session::get('message') }}
+    </div>
+@endif
 <div class="row">
 	<div class="col-sm-11">
-	<a href="{{url('mockups/bank')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
+	<a href="{{url('/bank/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
 	@section ('stable_panel_title','Data Bank')
 		@section ('stable_panel_body')
 			<table class="table table-striped">
 				<thead>
 					<tr>
+						<th>#</th>
 						<th>Nama Bank</th>
 						<th>Nomor Rekening</th>
 						<th>Jenis Rekening</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Bank BCA</td>
-						<td>360000000</td>
-						<th>Giro</th>
-					</tr>
-					<tr>
-						<td>Bank Mandiri</td>
-						<td>1400010000000</td>
-						<th>Tabungan</th>
-					</tr>
+					<!-- {{ $i = 1 }} -->
+					@if(isset($bank))
+						@foreach($bank as $dt_bank)
+							<tr>
+								<td>{{$i}}</td>
+								<td>{{($dt_bank->bank_nama) ? $dt_bank->bank_nama : null}}</td>
+								<td>{{($dt_bank->bank_nomor_rek) ? $dt_bank->bank_nomor_rek: null}}</td>
+								<td>{{($dt_bank->bank_jenis_rek) ? $dt_bank->bank_jenis_rek : null}}</td>
+							</tr>
+							<!-- {{ $i++ }} -->
+						@endforeach
+					@endif
 				</tbody>
 			</table>
 		@endsection

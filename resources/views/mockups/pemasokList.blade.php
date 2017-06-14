@@ -4,15 +4,20 @@
 
 @section('section')
 <div class="col-sm-12">
-
+@if(Session::has('message'))
+    <div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> 
+        {{ Session::get('message') }}
+    </div>
+@endif
 <div class="row">
 	<div class="col-sm-11">
-	<a href="{{url('mockups/pemasok')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
+	<a href="{{url('/pemasok/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
 	@section ('stable_panel_title','Data Pemasok')
 		@section ('stable_panel_body')
 			<table class="table table-striped">
 				<thead>
 					<tr>
+						<th>#</th>
 						<th>Nama</th>
 						<th>Alamat</th>
 						<th>Telepon</th>
@@ -21,27 +26,20 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Johny Walker</td>
-						<td>Jalan Wonokitri Besar, Surabaya</td>
-						<td>0315557901</td>
-						<td>081555590011</td>
-						<td>johnyw@mail.com</td>
-					</tr>
-					<tr>
-						<td>Handoko</td>
-						<td>Jalan A. Yani 108, Surabaya</td>
-						<td>0315557901</td>
-						<td>081555590011</td>
-						<td>handoko@mail.com</td>
-					</tr>
-					<tr>
-						<td>Dean Anderson</td>
-						<td>Jalan Ketabang Kali 45, Surabaya</td>
-						<td>0315557901</td>
-						<td>081555590011</td>
-						<td>andersondean@mail.com</td>
-					</tr>
+					<!-- {{ $i = 1 }} -->
+					@if(isset($pemasok))
+						@foreach($pemasok as $dt_pemasok)
+							<tr>
+								<td>{{$i}}</td>
+								<td>{{($dt_pemasok->pemasok_nama) ? $dt_pemasok->pemasok_nama : null}}</td>
+								<td>{{($dt_pemasok->pemasok_alamat) ? $dt_pemasok->pemasok_alamat : null}}</td>
+								<td>{{($dt_pemasok->pemasok_telepon) ? $dt_pemasok->pemasok_telepon : null}}</td>
+								<td>{{($dt_pemasok->pemasok_kontaklain) ? $dt_pemasok->pemasok_kontaklain : null}}</td>
+								<td>{{($dt_pemasok->pemasok_email) ? $dt_pemasok->pemasok_email : null}}</td>
+							</tr>
+							<!-- {{ $i++ }} -->
+						@endforeach
+					@endif
 				</tbody>
 			</table>
 		@endsection

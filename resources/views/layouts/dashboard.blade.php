@@ -57,25 +57,25 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> Master Data<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{{url('mockups/pelangganList')}}">Pelanggan</a>
+                                    <a href="{{url('/pelanggan')}}">Pelanggan</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/pemasokList')}}">Pemasok</a>
+                                    <a href="{{url('/pemasok')}}">Pemasok</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/asetList')}}">Aset</a>
+                                    <a href="{{url('/aset')}}">Aset</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/biaya_lainList')}}">Biaya Lain</a>
+                                    <a href="{{url('/biaya_lain')}}">Biaya Lain</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/bankList')}}">Bank</a>
+                                    <a href="{{url('/bank')}}">Bank</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/bank_pinjamanList')}}">Bank Pemberi Pinjaman</a>
+                                    <a href="{{url('/bank_pinjaman')}}">Bank Pemberi Pinjaman</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/aset_lainList')}}">Aset Lain</a>
+                                    <a href="{{url('/aset_lain')}}">Aset Lain</a>
                                 </li>
                                 <li>
                                     <a href="{{url('mockups/saldoList')}}">Saldo Awal</a>
