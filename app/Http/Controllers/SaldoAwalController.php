@@ -47,7 +47,7 @@ class SaldoAwalController extends Controller {
 		$rules = array(
 			'saldo_awal_periode' => 'required',
 			'saldo_awal_nilai' => 'required',
-			'saldo_awal_akun' => 'unique:saldo_awal_akun'
+			'saldo_awal_akun' => 'unique:mst_saldo_awal,saldo_awal_akun'
 		);
 
 		$validator = Validator::make(Input::all(), $rules);
@@ -57,7 +57,7 @@ class SaldoAwalController extends Controller {
 				->withErrors($validator)
 				->withInput();
 		} else {
-			$saldo = new Pelanggan;
+			$saldo = new Saldoawal;
 			$saldo->saldo_awal_periode		= Input::get('saldo_awal_periode');
 			$saldo->saldo_awal_akun			= Input::get('saldo_awal_akun');
 			$saldo->saldo_awal_nilai		= StripCurrency(Input::get('saldo_awal_nilai'));

@@ -92,7 +92,7 @@
                                             <a href="#">Penjualan <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="{{url('mockups/penjualan_jasatunai')}}">Penjualan Jasa Tunai</a>
+                                                    <a href="{{url('/jasa_tunai')}}">Penjualan Jasa Tunai</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{url('mockups/pembayaran_piutang')}}">Pembayaran Piutang</a>

@@ -3,7 +3,7 @@
 @section('section')
            
             <!-- /.row -->
-            <div class="col-sm-12">
+            <!--<div class="col-sm-12">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary">
@@ -93,17 +93,18 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- /.row -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-8">
                 
-                </div>
+                </div>-->
                 <!-- /.col-lg-8 -->
-                <div class="col-lg-4">
+            <!-- <div class="col-lg-4">
                 
-                </div>
-
+                </div> -->
                 <!-- /.col-lg-4 -->
+            <!-- </div>
+            </div> -->
             
 @stop

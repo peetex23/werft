@@ -48,7 +48,7 @@
             </div>
             <div class="panel-footer">
                 <div class="button-group">
-                    <input type="submit" name="btnSimpan" value="Simpan" class="btn btn-success" />
+                    <input type="submit" name="btnSimpan" value="Simpan" class="btn btn-success" />&nbsp;
                     <a class="btn btn-danger" href="{{url('/aset')}}">Batal</a>
                 </div>
             </div>

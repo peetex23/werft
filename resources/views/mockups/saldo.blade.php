@@ -50,14 +50,14 @@
                     <label class="col-md-3 control-label">Nilai Saldo Awal</label>
                     <div class="col-md-9 input-group">
                         <span class="input-group-addon">Rp.&nbsp;</span>
-                        <input type="text" name="saldo_awal_nilai" value="{{ old('saldo_awal_nilai') }}" class="form-control" placeholder="Masukkan Nilai Saldo Awal">
+                        <input type="text" name="saldo_awal_nilai" value="{{ old('saldo_awal_nilai') }}" class="form-control" placeholder="Masukkan Nilai Saldo Awal" onKeyUp="this.value=formatCurrency(this.value);">
                     </div>
                         {{$errors->first('saldo_awal_nilai', '<span style="color: #f00;"><i class="fa fa-warning"></i>&nbsp;:message</span>')}}
                 </div>
             </div>
             <div class="panel-footer">
                 <div class="button-group">
-                    <a class="btn btn-success" onclick="submit()">Simpan</a>
+                    <input type="submit" name="btnSimpan" value="Simpan" class="btn btn-success">&nbsp;
                     <a class="btn btn-danger" href="{{url('/saldo')}}">Batal</a>
                 </div>
             </div>

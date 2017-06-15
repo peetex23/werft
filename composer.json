@@ -13,7 +13,8 @@
 	},
 	"autoload": {
 		"files" : [
-			"app/currency_helper.php"
+			"app/currency_helper.php",
+			"app/date_helper.php"
 		],
 		"classmap": [
 			"database"
