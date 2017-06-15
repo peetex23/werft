@@ -2,16 +2,15 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Pemasok;
+use App\Saldoawal;
 use View;
 use Validator;
 use Redirect;
 use Input;
 use Session;
-
 use Illuminate\Http\Request;
 
-class PemasokController extends Controller {
+class SaldoAwalController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -21,9 +20,9 @@ class PemasokController extends Controller {
 	public function index()
 	{
 		//
-		$pemasok = Pemasok::all();
-		return View::make('mockups.pemasokList')->with('pemasok', $pemasok);
-		// return var_dump($pemasok);
+		$saldo = Saldoawal::all();
+		return View::make('mockups.saldoList')->with('saldo', $saldo);
+		// return var_dump($saldo);
 	}
 
 	/**
@@ -34,7 +33,7 @@ class PemasokController extends Controller {
 	public function create()
 	{
 		//
-		return View::make('mockups.pemasok');
+		return View::make('mockups.saldo');
 	}
 
 	/**
@@ -46,29 +45,28 @@ class PemasokController extends Controller {
 	{
 		//
 		$rules = array(
-			'pemasok_nama' => 'required',
-			'pemasok_email' => 'email');
+			'saldo_awal_periode' => 'required',
+			'saldo_awal_nilai' => 'required',
+			'saldo_awal_akun' => 'unique:saldo_awal_akun'
+		);
 
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/pemasok/create')
+			return Redirect::to('/saldo/create')
 				->withErrors($validator)
 				->withInput();
 		} else {
-			$pemasok = new Pemasok;
-			$pemasok->pemasok_nama			= Input::get('pemasok_nama');
-			$pemasok->pemasok_alamat		= Input::get('pemasok_alamat');
-			$pemasok->pemasok_telepon		= Input::get('pemasok_telepon');
-			$pemasok->pemasok_kontaklain	= Input::get('pemasok_kontaklain');
-			$pemasok->pemasok_email			= Input::get('pemasok_email');
-			$pemasok->save();
+			$saldo = new Pelanggan;
+			$saldo->saldo_awal_periode		= Input::get('saldo_awal_periode');
+			$saldo->saldo_awal_akun			= Input::get('saldo_awal_akun');
+			$saldo->saldo_awal_nilai		= StripCurrency(Input::get('saldo_awal_nilai'));
+			$saldo->save();
 
-			Session::flash('message', 'Data pemasok baru berhasil disimpan');
-			return Redirect::to('pemasok');
+			Session::flash('message', 'Data saldo baru berhasil disimpan');
+			return Redirect::to('saldo');
 		}
 	}
-
 	/**
 	 * Display the specified resource.
 	 *

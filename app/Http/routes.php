@@ -52,3 +52,5 @@ Route::resource('bank', 'BankController');
 Route::resource('bank_pinjaman', 'BankPinjamanController');
 
 Route::resource('aset_lain', 'AsetLainController');
+
+Route::resource('saldo', 'SaldoAwalController');

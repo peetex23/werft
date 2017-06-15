@@ -78,7 +78,7 @@
                                     <a href="{{url('/aset_lain')}}">Aset Lain</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('mockups/saldoList')}}">Saldo Awal</a>
+                                    <a href="{{url('/saldo')}}">Saldo Awal</a>
                                 </li>
                             </ul>
                         </li>
