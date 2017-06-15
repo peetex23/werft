@@ -95,7 +95,7 @@
                                                     <a href="{{url('/jasa_tunai')}}">Penjualan Jasa Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pembayaran_piutang')}}">Pembayaran Piutang</a>
+                                                    <a href="{{url('/pembayaran_piutang')}}">Pembayaran Piutang</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{url('mockups/pembayaran_aset')}}">Pembayaran Aset</a>

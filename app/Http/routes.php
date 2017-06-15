@@ -56,3 +56,5 @@ Route::resource('aset_lain', 'AsetLainController');
 Route::resource('saldo', 'SaldoAwalController');
 
 Route::resource('jasa_tunai', 'JasaTunaiController');
+
+Route::resource('pembayaran_piutang', 'PembayaranPiutangController');
