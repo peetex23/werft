@@ -98,7 +98,7 @@
                                                     <a href="{{url('/pembayaran_piutang')}}">Pembayaran Piutang</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pembayaran_aset')}}">Pembayaran Aset</a>
+                                                    <a href="{{url('/pembayaran_aset')}}">Penjualan Aset</a>
                                                 </li>
                                             </ul>
                                         </li>
