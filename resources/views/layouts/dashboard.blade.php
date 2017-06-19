@@ -117,7 +117,7 @@
                                             <a href="#">Modal <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="{{url('mockups/modal_uang')}}">Modal Uang</a>
+                                                    <a href="{{url('/modal_uang')}}">Modal Uang</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{url('mockups/modal_barang')}}">Modal Barang</a>

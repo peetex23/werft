@@ -24,8 +24,8 @@
                     <div class="col-md-9 input-group">
                         <span class="input-group-addon">Rp.&nbsp;</span>
                         <input type="text" name="modal_uang_jumlah" value="{{ old('modal_uang_jumlah') }}" class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
-                        {{$errors->first('modal_uang_jumlah', '<span style="color: #f00;"><i class="fa fa-warning"></i>&nbsp;:message</span>')}}
                     </div>
+                    {{$errors->first('modal_uang_jumlah', '<span style="color: #f00;"><i class="fa fa-warning"></i>&nbsp;:message</span>')}}
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Metode Pembayaran</label>
@@ -39,8 +39,8 @@
                         <label class="radio-inline">
                             <input type="radio" name="modal_uang_metode_bayar" id="txt_metodeBayar3" value="Giro" {{ (old('modal_uang_metode_bayar') == "Giro") ? "checked" : ""}}>Giro
                         </label>
-                        {{$errors->first('modal_uang_metode_bayar', '<span style="color: #f00;"><i class="fa fa-warning"></i>&nbsp;:message</span>')}}
                     </div>
+                    {{$errors->first('modal_uang_metode_bayar', '<span style="color: #f00;"><i class="fa fa-warning"></i>&nbsp;:message</span>')}}
                 </div>
                 <div class="form-group clearfix">
                     <label class="col-md-3 control-label">Tanggal</label>
