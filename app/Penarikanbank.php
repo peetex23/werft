@@ -11,6 +11,7 @@ class Penarikanbank extends Model {
 		'penarikan_bank_asalbank',
 		'penarikan_bank_tanggal',
 		'penarikan_bank_catatan',
-		'penarikan_bank_flag'
+		'penarikan_bank_flag',
+		'id_bank'
 	];
 }

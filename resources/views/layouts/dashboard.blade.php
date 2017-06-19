@@ -125,15 +125,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">Penarikan dari Bank <span class="fa arrow"></span></a>
-                                            <ul class="nav nav-fourth-level">
-                                                <li>
-                                                    <a href="{{url('mockups/penarikan_giro')}}">Penarikan Giro</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{url('mockups/penarikan_tabungan')}}">Penarikan Tabungan</a>
-                                                </li>
-                                            </ul>
+                                            <a href="{{ url('/penarikan_bank') }}">Penarikan dari Bank</a>
                                         </li>
                                         <li>
                                             <a href="{{url('mockups/pendapatan_dimuka')}}">Pendapatan diterima di muka</a>

@@ -68,3 +68,5 @@ Route::resource('utang_nonbank', 'UtangNonbankController');
 Route::resource('modal_uang', 'ModalUangController');
 
 Route::resource('modal_barang', 'ModalBarangController');
+
+Route::resource('penarikan_bank', 'PenarikanBankController');
