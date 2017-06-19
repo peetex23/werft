@@ -9,28 +9,34 @@
 
 @section('section')
 <div class="col-sm-12">
+@if($errors->any())
+    <div class="alert alert-danger">
+        <i class="fa fa-warning"></i>&nbsp;Periksa kembali isian anda.
+    </div>
+@endif
 <div class="row">
     <div class="col-lg-9">
-        <form role="form" class="form form-horizontal">
+        <form role="form" class="form form-horizontal" method="POST" action="{{url('/jasa_tunai')}}"  autocomplete="off">
+            <input type="hidden" name="_token" value="{{ Session::token() }}">
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Pinjaman Pokok</label>
                     <div class="col-md-9 input-group">
                         <span class="input-group-addon">Rp.&nbsp;</span>
-                        <input class="form-control" placeholder="">
+                        <input type="text" name="xxx" value="{{ old('yyy') }}" class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Bunga Pinjaman</label>
                     <div class="col-md-9 input-group">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" name="xxx" value="{{ old('yyy') }}" class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
                         <span class="input-group-addon">&nbsp;%</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Jenis Bunga</label>
                     <div class="col-md-9">
-                        <select class="form-control">
+                        <select name="xxx" class="form-control">
                             <option>Flat</option>
                             <option>Non-Flat</option>
                         </select>
@@ -39,14 +45,14 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Jangka Waktu Pinjaman</label>
                     <div class="col-md-9 input-group">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" name="xxx" value="{{ old('yyy') }}" class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
                         <span class="input-group-addon">&nbsp;Bulan</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Bank Pemberi Pinjaman</label>
                     <div class="col-md-9">
-                        <select class="form-control">
+                        <select name="xxx" class="form-control">
                             <option>Bank Jatim</option>
                             <option>Bank BRI</option>
                             <option>Bank Mandiri</option>
@@ -70,7 +76,7 @@
                 <div class="form-group clearfix">
                     <label class="col-md-3 control-label">Tanggal</label>
                     <div class="col-md-9 input-group date">
-                        <input type="text" class="form-control datepicker" placeholder="">
+                        <input type="text" name="xxx" value="{{ old('yyy') }}"  class="form-control datepicker" placeholder="">
                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                     </div>
                 </div>
@@ -90,6 +96,7 @@
     @parent
     <script src="{{asset('assets/bootstrap.datetimepicker/moment.js')}}"></script>
     <script src="{{asset('assets/bootstrap.datetimepicker/bootstrap-datetimepicker.js')}}"></script>
+    <script src="{{asset('assets/scripts/formatCurrency.js')}}"></script>
 
     <script type="text/javascript">
         $(function () {
