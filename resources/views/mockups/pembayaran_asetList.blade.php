@@ -35,7 +35,7 @@
 								<td>{{$i}}</td>
 								<td>{{($dt_pembayaran_aset->pembayaran_aset_nama) ? $dt_pembayaran_aset->pembayaran_aset_nama : null}}</td>
 								<td>{{($dt_pembayaran_aset->pembayaran_aset_harga) ? "Rp.&nbsp;" . currency_format($dt_pembayaran_aset->pembayaran_aset_harga) : null}}</td>
-								<td>{{($dt_pembayaran_aset->pembayaran_aset_jumlah) ? "Rp.&nbsp;" . currency_format($dt_pembayaran_aset->pembayaran_aset_jumlah) : null}}</td>
+								<td>{{($dt_pembayaran_aset->pembayaran_aset_jumlah) ? currency_format($dt_pembayaran_aset->pembayaran_aset_jumlah) : null}}</td>
 								<td>{{($dt_pembayaran_aset->pembayaran_aset_total) ? "Rp.&nbsp;" . currency_format($dt_pembayaran_aset->pembayaran_aset_total) : null}}</td>
 								<td>{{($dt_pembayaran_aset->pemasok_nama) ? $dt_pembayaran_aset->pemasok_nama : null}}</td>
 								<td>{{($dt_pembayaran_aset->pembayaran_aset_tanggal) ? formatFromDB($dt_pembayaran_aset->pembayaran_aset_tanggal) : null}}</td>

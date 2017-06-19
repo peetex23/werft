@@ -29,8 +29,6 @@ function updateHarga(num1, num2, target){
 	num1 = stripCurrency(num1);
 	num2 = stripCurrency(num2);
 	num3 = num1 * num2;
-	console.log(num1);
-	console.log(num2);
-	console.log(num3);
+
 	document.getElementById(target).value = formatCurrency(num3);
 }
