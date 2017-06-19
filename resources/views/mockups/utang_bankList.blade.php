@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
-@section('title', 'Pembayaran Piutang')
-@section('page_heading','Data Pembayaran Piutang')
+@section('title', 'Utang Bank')
+@section('page_heading','Data Utang Bank')
 
 @section('section')
 <div class="col-sm-12">
@@ -11,31 +11,35 @@
 @endif
 <div class="row">
 	<div class="col-sm-11">
-	<a href="{{url('/pembayaran_piutang/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
+	<a href="{{url('/utang_bank/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
 	@section ('stable_panel_title','Data Pembayaran Piutang')
 		@section ('stable_panel_body')
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Jumlah</th>
+						<th>Pinjaman Pokok</th>
+						<th>Bunga Pinjaman</th>
+						<th>Jenis Suku Bunga</th>
+						<th>Jangka Waktu Pinjaman</th>
+						<th>Bank</th>
 						<th>Metode Pembayaran</th>
-						<th>Pelanggan</th>
 						<th>Tanggal</th>
-						<th>Catatan</th>
 					</tr>
 				</thead>
 				<tbody>
 					<!-- {{ $i = 1 }} -->
-					@if(isset($pembayaran_piutang))
-						@foreach($pembayaran_piutang as $dt_pembayaran_piutang)
+					@if(isset($utang))
+						@foreach($utang as $dt_utang_bank)
 							<tr>
 								<td>{{$i}}</td>
-								<td>{{($dt_pembayaran_piutang->pembayaran_piutang_jumlah) ? "Rp.&nbsp;" . currency_format($dt_pembayaran_piutang->pembayaran_piutang_jumlah) : null}}</td>
-								<td>{{($dt_pembayaran_piutang->pembayaran_piutang_metode) ? $dt_pembayaran_piutang->pembayaran_piutang_metode : null}}</td>
-								<td>{{($dt_pembayaran_piutang->pelanggan_nama) ? $dt_pembayaran_piutang->pelanggan_nama : null}}</td>
-								<td>{{($dt_pembayaran_piutang->pembayaran_piutang_tanggal) ? formatFromDB($dt_pembayaran_piutang->pembayaran_piutang_tanggal) : null}}</td>
-								<td>{{($dt_pembayaran_piutang->pembayaran_piutang_catatan) ? stripslashes($dt_pembayaran_piutang->pembayaran_piutang_catatan) : null}}</td>
+								<td>{{($dt_utang_bank->utang_jumlahpokok) ? "Rp.&nbsp;" . currency_format($dt_utang_bank->utang_jumlahpokok) : null}}</td>
+								<td>{{($dt_utang_bank->utang_bunga) ? currency_format($dt_utang_bank->utang_bunga) . "&nbsp;%" : null}}</td>
+								<td>{{($dt_utang_bank->utang_jenis_bunga) ? ($dt_utang_bank->utang_jenis_bunga) : null}}</td>
+								<td>{{($dt_utang_bank->utang_jangka_waktu) ? currency_format($dt_utang_bank->utang_jangka_waktu) . "&nbsp;Bulan" : null}}</td>
+								<td>{{($dt_utang_bank->bank_nama) ? $dt_utang_bank->bank_nama : null}}</td>
+								<td>{{($dt_utang_bank->utang_metode_bayar) ? $dt_utang_bank->utang_metode_bayar : null}}</td>
+								<td>{{($dt_utang_bank->utang_tanggal) ? formatFromDB($dt_utang_bank->utang_tanggal) : null}}</td>
 							</tr>
 							<!-- {{ $i++ }} -->
 						@endforeach

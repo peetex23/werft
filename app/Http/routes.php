@@ -60,3 +60,5 @@ Route::resource('jasa_tunai', 'JasaTunaiController');
 Route::resource('pembayaran_piutang', 'PembayaranPiutangController');
 
 Route::resource('pembayaran_aset', 'PembayaranAsetController');
+
+Route::resource('utang_bank', 'UtangBankController');

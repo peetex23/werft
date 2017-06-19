@@ -39,7 +39,7 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
+                        <!--<li class="sidebar-search">
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
@@ -47,9 +47,9 @@
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
-                            </div>
+                            </div> -->
                             <!-- /input-group -->
-                        </li>
+                        <!-- </li> -->
                         <li {{ (Request::is('/home') ? 'class="active"' : '') }}>
                             <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
@@ -106,7 +106,7 @@
                                             <a href="#">Utang <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="{{url('mockups/utang_bank')}}">Utang Bank</a>
+                                                    <a href="{{url('/utang_bank')}}">Utang Bank</a>
                                                 </li>
                                                 <li>
                                                     <a href="{{url('mockups/utang_nonbank')}}">Utang Non-Bank</a>
