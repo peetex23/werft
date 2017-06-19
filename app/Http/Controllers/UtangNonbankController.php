@@ -63,7 +63,7 @@ class UtangNonbankController extends Controller {
 			$utang_nonbank->utang_bank			= 'n';
 			$utang_nonbank->save();
 
-			Session::flash('message', 'Data pembayaran piutang baru berhasil disimpan');
+			Session::flash('message', 'Data utang non bank baru berhasil disimpan');
 			return Redirect::to('utang_nonbank');
 		}
 	}

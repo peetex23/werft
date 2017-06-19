@@ -56,13 +56,13 @@ class ModalUangController extends Controller {
 				->withInput();
 		} else {
 			$modal_uang = new Modaluang;
-			$modal_uang->modal_uang_jumlah			= Input::get('modal_uang_jumlah');
+			$modal_uang->modal_uang_jumlah			= StripCurrency(Input::get('modal_uang_jumlah'));
 			$modal_uang->modal_uang_metode_bayar	= Input::get('modal_uang_metode_bayar');
 			$modal_uang->modal_uang_tanggal			= Carbon::createFromFormat('d-m-Y', Input::get('modal_uang_tanggal'));
 			$modal_uang->modal_uang_catatan			= addslashes(Input::get('modal_uang_catatan')) ;
 			$modal_uang->save();
 
-			Session::flash('message', 'Data pembayaran piutang baru berhasil disimpan');
+			Session::flash('message', 'Data modal uang baru berhasil disimpan');
 			return Redirect::to('modal_uang');
 		}
 	}

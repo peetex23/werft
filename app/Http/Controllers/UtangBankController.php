@@ -71,7 +71,7 @@ class UtangBankController extends Controller {
 			$utang->utang_bank			= 'y';
 			$utang->save();
 
-			Session::flash('message', 'Data pembayaran piutang baru berhasil disimpan');
+			Session::flash('message', 'Data utang bank baru berhasil disimpan');
 			return Redirect::to('utang_bank');
 		}
 	}
