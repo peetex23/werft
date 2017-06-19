@@ -109,7 +109,7 @@
                                                     <a href="{{url('/utang_bank')}}">Utang Bank</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/utang_nonbank')}}">Utang Non-Bank</a>
+                                                    <a href="{{url('/utang_nonbank')}}">Utang Non-Bank</a>
                                                 </li>
                                             </ul>
                                         </li>
