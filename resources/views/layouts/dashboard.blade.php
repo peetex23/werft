@@ -120,7 +120,7 @@
                                                     <a href="{{url('/modal_uang')}}">Modal Uang</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/modal_barang')}}">Modal Barang</a>
+                                                    <a href="{{url('/modal_barang')}}">Modal Barang</a>
                                                 </li>
                                             </ul>
                                         </li>
