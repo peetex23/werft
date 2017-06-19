@@ -64,3 +64,5 @@ Route::resource('pembayaran_aset', 'PembayaranAsetController');
 Route::resource('utang_bank', 'UtangBankController');
 
 Route::resource('utang_nonbank', 'UtangNonbankController');
+
+Route::resource('modal_uang', 'ModalUangController');

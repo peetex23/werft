@@ -12,7 +12,7 @@
 <div class="row">
 	<div class="col-sm-11">
 	<a href="{{url('/saldo/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
-	@section ('stable_panel_title','Data Aset Lain')
+	@section ('stable_panel_title','Data Saldo Awal')
 		@section ('stable_panel_body')
 			<table class="table table-striped">
 				<thead>

@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
-@section('title', 'Utang Non Bank')
-@section('page_heading','Data Utang Non Bank')
+@section('title', 'Modal Uang')
+@section('page_heading','Data Modal Uang')
 
 @section('section')
 <div class="col-sm-12">
@@ -11,8 +11,8 @@
 @endif
 <div class="row">
 	<div class="col-sm-11">
-	<a href="{{url('/utang_nonbank/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
-	@section ('stable_panel_title','Data Utang Non Bank')
+	<a href="{{url('/modal_uang/create')}}" class="btn btn-primary btn-rounded"><i class="fa fa-plus fa-fw"></i> Tambah</a>
+	@section ('stable_panel_title','Data Modal Uang')
 		@section ('stable_panel_body')
 			<table class="table table-striped">
 				<thead>
@@ -26,14 +26,14 @@
 				</thead>
 				<tbody>
 					<!-- {{ $i = 1 }} -->
-					@if(isset($utang_nonbank))
-						@foreach($utang_nonbank as $dt_utang_nonbank)
+					@if(isset($modal_uang))
+						@foreach($modal_uang as $dt_modal_uang)
 							<tr>
 								<td>{{$i}}</td>
-								<td>{{($dt_utang_nonbank->utang_jumlahpokok) ? "Rp.&nbsp;" . currency_format($dt_utang_nonbank->utang_jumlahpokok) : null}}</td>
-								<td>{{($dt_utang_nonbank->utang_metode_bayar) ? $dt_utang_nonbank->utang_metode_bayar : null}}</td>
-								<td>{{($dt_utang_nonbank->utang_tanggal) ? formatFromDB($dt_utang_nonbank->utang_tanggal) : null}}</td>
-								<td>{{($dt_utang_nonbank->utang_catatan) ? stripslashes($dt_utang_nonbank->utang_catatan) : null}}</td>
+								<td>{{($dt_modal_uang->modal_uang_jumlah) ? "Rp.&nbsp;" . currency_format($dt_modal_uang->modal_uang_jumlah) : null}}</td>
+								<td>{{($dt_modal_uang->modal_uang_metode_bayar) ? $dt_modal_uang->modal_uang_metode_bayar : null}}</td>
+								<td>{{($dt_modal_uang->modal_uang_tanggal) ? formatFromDB($dt_modal_uang->modal_uang_tanggal) : null}}</td>
+								<td>{{($dt_modal_uang->modal_uang_catatan) ? stripslashes($dt_modal_uang->modal_uang_catatan) : null}}</td>
 							</tr>
 							<!-- {{ $i++ }} -->
 						@endforeach
