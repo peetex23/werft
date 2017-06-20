@@ -139,44 +139,44 @@
                                             <a href="#">Kewajiban <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="{{url('mockups/pelunasan_pembelian_kredit')}}">Pelunasan Pembelian Kredit</a>
+                                                    <a href="{{url('/pelunasan_pembelian_kredit')}}">Pelunasan Pembelian Kredit</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pelunasan_utang_bank')}}">Pelunasan Utang Bank</a>
+                                                    <a href="{{url('/pelunasan_utang_bank')}}">Pelunasan Utang Bank</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pelunasan_utang_nonbank')}}">Pelunasan Utang non-Bank</a>
+                                                    <a href="{{url('/pelunasan_utang_nonbank')}}">Pelunasan Utang non-Bank</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pelunasan_biaya')}}">Pelunasan Biaya</a>
+                                                    <a href="{{url('/pelunasan_biaya')}}">Pelunasan Biaya</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{url('mockups/biaya')}}">Biaya</a>
+                                            <a href="{{url('/biaya')}}">Biaya</a>
                                         </li>
                                         <li>
                                             <a href="#">Pembelian Aset <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="{{url('mockups/pembelian_aset_tetap_tunai')}}">Pembelian Aset Tetap Tunai</a>
+                                                    <a href="{{url('/pembelian_aset_tetap_tunai')}}">Pembelian Aset Tetap Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pembelian_aset_tetap_kredit')}}">Pembelian Aset Tetap Kredit</a>
+                                                    <a href="{{url('/pembelian_aset_tetap_kredit')}}">Pembelian Aset Tetap Kredit</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pembelian_aset_lain_tunai')}}">Pembelian Aset Lain Tunai</a>
+                                                    <a href="{{url('/pembelian_aset_lain_tunai')}}">Pembelian Aset Lain Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('mockups/pembelian_aset_lain_kredit')}}">Pembelian Aset Lain Kredit</a>
+                                                    <a href="{{url('/pembelian_aset_lain_kredit')}}">Pembelian Aset Lain Kredit</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{url('mockups/penghapusan_piutang')}}">Penghapusan Piutang</a>
+                                            <a href="{{url('/penghapusan_piutang')}}">Penghapusan Piutang</a>
                                         </li>
                                         <li>
-                                            <a href="{{url('mockups/biaya_dimuka')}}">Biaya dibayar di muka</a>
+                                            <a href="{{url('/biaya_dimuka')}}">Biaya dibayar di muka</a>
                                         </li>
                                     </ul>
                                 </li>
