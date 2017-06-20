@@ -74,3 +74,5 @@ Route::resource('penarikan_bank', 'PenarikanBankController');
 Route::resource('pendapatan_dimuka', 'PendapatanDimukaController');
 
 Route::resource('pelunasan_pembelian_kredit', 'PelunasanPembelianKreditController');
+
+Route::resource('pelunasan_utang_bank', 'PelunasanUtangBankController');
