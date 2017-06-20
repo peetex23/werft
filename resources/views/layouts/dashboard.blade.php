@@ -128,7 +128,7 @@
                                             <a href="{{ url('/penarikan_bank') }}">Penarikan dari Bank</a>
                                         </li>
                                         <li>
-                                            <a href="{{url('mockups/pendapatan_dimuka')}}">Pendapatan diterima di muka</a>
+                                            <a href="{{url('/pendapatan_dimuka')}}">Pendapatan diterima di muka</a>
                                         </li>
                                     </ul>
                                 </li>

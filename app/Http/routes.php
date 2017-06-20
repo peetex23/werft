@@ -70,3 +70,5 @@ Route::resource('modal_uang', 'ModalUangController');
 Route::resource('modal_barang', 'ModalBarangController');
 
 Route::resource('penarikan_bank', 'PenarikanBankController');
+
+Route::resource('pendapatan_dimuka', 'PendapatanDimukaController');
