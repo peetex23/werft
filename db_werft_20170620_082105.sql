@@ -135,7 +135,7 @@ CREATE TABLE `tb_pelanggan` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 5;
+AUTO_INCREMENT = 6;
 -- ---------------------------------------------------------
 
 
@@ -152,7 +152,7 @@ CREATE TABLE `tb_pemasok` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 2;
+AUTO_INCREMENT = 3;
 -- ---------------------------------------------------------
 
 
@@ -187,7 +187,7 @@ CREATE TABLE `trn_jasa_tunai` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 4;
 -- ---------------------------------------------------------
 
 
@@ -204,7 +204,7 @@ CREATE TABLE `trn_modal_barang` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 2;
 -- ---------------------------------------------------------
 
 
@@ -220,7 +220,7 @@ CREATE TABLE `trn_modal_uang` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 2;
 -- ---------------------------------------------------------
 
 
@@ -254,7 +254,7 @@ CREATE TABLE `trn_pelunasan_pembelian_kredit` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 2;
 -- ---------------------------------------------------------
 
 
@@ -307,7 +307,7 @@ CREATE TABLE `trn_pembayaran_aset` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 3;
 -- ---------------------------------------------------------
 
 
@@ -324,7 +324,7 @@ CREATE TABLE `trn_pembayaran_piutang` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 3;
 -- ---------------------------------------------------------
 
 
@@ -362,10 +362,11 @@ CREATE TABLE `trn_penarikan_bank` (
 	`penarikan_bank_tanggal` Date NULL,
 	`penarikan_bank_catatan` Text NULL,
 	`penarikan_bank_flag` Char( 255 ) NULL,
+	`id_bank` Smallint( 5 ) UNSIGNED NULL,
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 2;
 -- ---------------------------------------------------------
 
 
@@ -381,7 +382,7 @@ CREATE TABLE `trn_pendapatan_dimuka` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 3;
 -- ---------------------------------------------------------
 
 
@@ -418,7 +419,7 @@ CREATE TABLE `trn_utang` (
 	PRIMARY KEY ( `id` ) )
 COLLATE = utf8_unicode_ci
 ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+AUTO_INCREMENT = 5;
 -- ---------------------------------------------------------
 
 
