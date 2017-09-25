@@ -37,6 +37,10 @@ Route::get('/table', function() {
 	return View::make('table');
 });
 
+Route::get('/mock_', function() {
+	return View::make('table');
+});
+
 Route::get('/mockups/{page}', 'MockupController@showPage');
 
 Route::resource('pelanggan', 'PelangganController');
@@ -76,3 +80,11 @@ Route::resource('pendapatan_dimuka', 'PendapatanDimukaController');
 Route::resource('pelunasan_pembelian_kredit', 'PelunasanPembelianKreditController');
 
 Route::resource('pelunasan_utang_bank', 'PelunasanUtangBankController');
+
+Route::resource('pelunasan_utang_nonbank', 'PelunasanUtangNonBankController');
+
+Route::resource('pelunasan_biaya', 'PelunasanBiayaController');
+
+Route::resource('pembelian_aset', 'PembelianAsetController');
+
+Route::get('/pembelian_aset/{is_tetap}/{is_tunai}', 'PembelianAsetController@create');

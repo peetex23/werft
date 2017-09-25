@@ -153,22 +153,22 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{url('/biaya')}}">Biaya</a>
+                                            <a href="{{url('/pelunasan_biaya')}}">Biaya</a>
                                         </li>
                                         <li>
                                             <a href="#">Pembelian Aset <span class="fa arrow"></span></a>
                                             <ul class="nav nav-fourth-level">
                                                 <li>
-                                                    <a href="{{url('/pembelian_aset_tetap_tunai')}}">Pembelian Aset Tetap Tunai</a>
+                                                    <a href="{{url('/pembelian_aset/tetap/tunai')}}">Pembelian Aset Tetap Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('/pembelian_aset_tetap_kredit')}}">Pembelian Aset Tetap Kredit</a>
+                                                    <a href="{{url('/pembelian_aset/tetap/kredit')}}">Pembelian Aset Tetap Kredit</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('/pembelian_aset_lain_tunai')}}">Pembelian Aset Lain Tunai</a>
+                                                    <a href="{{url('/pembelian_aset/lain/tunai')}}">Pembelian Aset Lain Tunai</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('/pembelian_aset_lain_kredit')}}">Pembelian Aset Lain Kredit</a>
+                                                    <a href="{{url('/pembelian_aset/lain/kredit')}}">Pembelian Aset Lain Kredit</a>
                                                 </li>
                                             </ul>
                                         </li>

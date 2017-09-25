@@ -79,7 +79,7 @@
             <div class="panel-footer">
                 <div class="button-group">
                     <input type="submit" name="btnSimpan" value="Simpan" class="btn btn-success" />&nbsp;
-                    <a class="btn btn-danger" href="#">Batal</a>
+                    <a class="btn btn-danger" href="{{ url('/pelunasan_utang_bank') }}">Batal</a>
                 </div>
             </div>
         </form>
