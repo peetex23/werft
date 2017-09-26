@@ -54,34 +54,35 @@ class PembelianAsetController extends Controller {
 	public function store()
 	{
 		//
-		$is_tunai = Input::get('pembelian_aset_istunai');
-		$is_tetap = Input::get('pembelian_aset_istetap');
+		$is_tunai = (Input::get('pembelian_aset_istunai') == 'y') ? 'tunai' : 'kredit';
+		$is_tetap = (Input::get('pembelian_aset_istetap') == 'y') ? 'tetap' : 'lain';
 
 		$rules = array('pembelian_aset_namaaset' => 'required');
 
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/pembelian_aset/create/'. $is_tetap ."/". $is_tunai)
+			return Redirect::to('/pembelian_aset/'. $is_tetap ."/". $is_tunai)
 				->withErrors($validator)
 				->withInput();
 		} else {
 			$pembelian_aset = new PembelianAset;
+			$pembelian_aset->pembelian_aset_namaaset		= Input::get('pembelian_aset_namaaset');
 			$pembelian_aset->pembelian_aset_jumlah			= Input::get('pembelian_aset_jumlah');
-			$pembelian_aset->pembelian_aset_metode_bayar	= Input::get('pembelian_aset_metode_bayar');
-			$pembelian_aset->pembelian_aset_masamanfaat		= Input::get('pembelian_aset_masamanfaat');
-			$pembelian_aset->pembelian_aset_nilaiperolehan	= Input::get('pembelian_aset_nilaiperolehan');
-			$pembelian_aset->pembelian_aset_totalharga		= Input::get('pembelian_aset_totalharga');
+			$pembelian_aset->pembelian_aset_metode_bayar	= StripCurrency(Input::get('pembelian_aset_metode_bayar'));
+			$pembelian_aset->pembelian_aset_masamanfaat		= StripCurrency(Input::get('pembelian_aset_masamanfaat'));
+			$pembelian_aset->pembelian_aset_nilaiperolehan	= StripCurrency(Input::get('pembelian_aset_nilaiperolehan'));
+			$pembelian_aset->pembelian_aset_totalharga		= StripCurrency(Input::get('pembelian_aset_totalharga'));
 			$pembelian_aset->idpemasok						= Input::get('idpemasok');
-			$pembelian_aset->pembelian_aset_isdownpayment	= Input::get('pembelian_aset_isdownpayment');
+			$pembelian_aset->pembelian_aset_isdownpayment	= (Input::get('pembelian_aset_isdownpayment')) ? Input::get('pembelian_aset_isdownpayment') : 'n';
 			$pembelian_aset->pembelian_aset_istunai			= Input::get('pembelian_aset_istunai');
 			$pembelian_aset->pembelian_aset_istetap			= Input::get('pembelian_aset_istetap');
 			$pembelian_aset->pembelian_aset_tanggal			= Carbon::createFromFormat('d-m-Y', Input::get('pembelian_aset_tanggal'));
 			$pembelian_aset->pembelian_aset_catatan			= addslashes(Input::get('pembelian_aset_catatan')) ;
 			$pembelian_aset->save();
 
-			Session::flash('message', 'Data pembayaran piutang baru berhasil disimpan');
-			return Redirect::to('pembelian_aset');
+			Session::flash('message', 'Data pembelian aset berhasil disimpan');
+			return Redirect::to('/pembelian_aset/'. $is_tetap ."/". $is_tunai);
 		}
 	}
 
