@@ -88,3 +88,7 @@ Route::resource('pelunasan_biaya', 'PelunasanBiayaController');
 Route::resource('pembelian_aset', 'PembelianAsetController');
 
 Route::get('/pembelian_aset/{is_tetap}/{is_tunai}', 'PembelianAsetController@create');
+
+Route::resource('penghapusan_piutang', 'PenghapusanPiutangController');
+
+Route::resource('biaya_dimuka', 'BiayaDimukaController');

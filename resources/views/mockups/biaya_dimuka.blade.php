@@ -9,21 +9,28 @@
 
 @section('section')
 <div class="col-sm-12">
+@if($errors->any())
+    <div class="alert alert-danger">
+        <i class="fa fa-warning"></i>&nbsp;Periksa kembali isian anda.
+    </div>
+@endif
 <div class="row">
     <div class="col-lg-9">
-        <form role="form" class="form form-horizontal">
+        <form role="form" class="form form-horizontal" method="POST" action="{{url('/biaya_dimuka')}}"  autocomplete="off">
+            <input type="hidden" name="_token" value="{{ Session::token() }}">
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Jumlah Biaya</label>
                     <div class="col-md-9 input-group">
                         <span class="input-group-addon">Rp.&nbsp;</span>
-                        <input class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
+                        <input type="text" name="biaya_dimuka_jumlah" value="{{ old('biaya_dimuka_jumlah') }}" class="form-control" placeholder="" onKeyUp="this.value=formatCurrency(this.value);">
                     </div>
+                    {{$errors->first('biaya_dimuka_jumlah', '<span style="color: #f00;"><i class="fa fa-warning"></i>&nbsp;:message</span>')}}
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Jangka Waktu</label>
                     <div class="col-md-9 input-group">
-                        <input type="text" class="form-control">
+                        <input type="text" name="biaya_dimuka_jangkawaktu" value="{{ old('biaya_dimuka_jangkawaktu') }}" class="form-control">
                         <span class="input-group-addon">&nbsp;Bulan</span>
                     </div>
                 </div>
@@ -31,34 +38,34 @@
                     <label class="col-md-3 control-label">Metode Pembayaran</label>
                     <div class="col-md-9">
                         <label class="radio-inline">
-                            <input type="radio" name="txt_metodeBayar" id="txt_metodeBayar1" value="option1" checked>Tunai
+                            <input type="radio" name="biaya_dimuka_metode_bayar" id="biaya_dimuka_metode_bayar1" value="Tunai" {{ (old('biaya_dimuka_metode_bayar') == "Tunai") ? "checked" : ""}}>Tunai
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="txt_metodeBayar" id="txt_metodeBayar2" value="option2">Transfer
+                            <input type="radio" name="biaya_dimuka_metode_bayar" id="biaya_dimuka_metode_bayar2" value="Transfer" {{ (old('biaya_dimuka_metode_bayar') == "Transfer") ? "checked" : ""}}>Transfer
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="txt_metodeBayar" id="txt_metodeBayar3" value="option3">Giro
+                            <input type="radio" name="biaya_dimuka_metode_bayar" id="biaya_dimuka_metode_bayar3" value="Giro" {{ (old('biaya_dimuka_metode_bayar') == "Giro") ? "checked" : ""}}>Giro
                         </label>
                     </div>
                 </div>
                 <div class="form-group clearfix">
                     <label class="col-md-3 control-label">Tanggal</label>
                     <div class="col-md-9 input-group date">
-                        <input type="text" class="form-control datepicker" placeholder="">
+                        <input type="text" name="biaya_dimuka_tanggal" value="{{ old('biaya_dimuka_tanggal') }}" class="form-control datepicker" placeholder="">
                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Catatan</label>
                     <div class="col-md-9">
-                        <textarea class="form-control" rows="4"></textarea>
+                        <textarea name="biaya_dimuka_catatan" class="form-control" rows="4">{{ old('biaya_dimuka_catatan') }}</textarea>
                     </div>
                 </div>
             </div>
             <div class="panel-footer">
                 <div class="button-group">
-                    <a class="btn btn-success" href="#">Simpan</a>
-                    <a class="btn btn-danger" href="#">Batal</a>
+                    <input type="submit" name="btnSimpan" value="Simpan" class="btn btn-success" />&nbsp;
+                    <a class="btn btn-danger" href="{{ url('biaya_dimuka') }}">Batal</a>
                 </div>
             </div>
         </form>
