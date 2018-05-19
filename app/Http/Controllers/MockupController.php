@@ -12,4 +12,9 @@ class MockupController extends Controller {
 		return view("mockups.$page");
 	}
 
+	public function history($page)
+	{
+		return view("history.$page");
+	}
+
 }

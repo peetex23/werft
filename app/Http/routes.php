@@ -37,11 +37,9 @@ Route::get('/table', function() {
 	return View::make('table');
 });
 
-Route::get('/mock_', function() {
-	return View::make('table');
-});
-
 Route::get('/mockups/{page}', 'MockupController@showPage');
+
+// Route::get('/history/{page}', 'MockupController@history');
 
 Route::resource('pelanggan', 'PelangganController');
 
@@ -92,3 +90,5 @@ Route::get('/pembelian_aset/{is_tetap}/{is_tunai}', 'PembelianAsetController@cre
 Route::resource('penghapusan_piutang', 'PenghapusanPiutangController');
 
 Route::resource('biaya_dimuka', 'BiayaDimukaController');
+
+Route::get('/history/harian', 'HistoryController@index_harian');
